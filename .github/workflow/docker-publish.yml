@@ -1,4 +1,4 @@
-name: CI - Publicar Imagem Docker da API
+name: CI - Publicar Imagem Docker do Frontend
 
 # Este workflow roda em todo push para a branch main
 on:
@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # 3. Faz a build e o push da imagem
-      - name: Build e push da imagem da API
+      - name: Build e push da imagem do Frontend
         uses: docker/build-push-action@v4
         with:
           context: .
